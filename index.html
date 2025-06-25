@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Genivox AI</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #0f0f0f; color: white; text-align: center; padding: 2rem; }
+    h1 { color: #00ffaa; }
+    .qr-container { margin: 2rem 0; }
+    .ai-box { margin-top: 2rem; background: #1f1f1f; padding: 1rem; border-radius: 10px; }
+    input, button { padding: 0.5rem; border-radius: 5px; border: none; margin-top: 0.5rem; }
+    button { background: #00ffaa; color: black; font-weight: bold; cursor: pointer; }
+    a { color: #00ffaa; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <h1>Genivox AI</h1>
+  <p>موقع تجريبي لمنتج ذكاء اصطناعي</p>
+
+  <div class="qr-container">
+    <h3>ادفع باستخدام سولانا</h3>
+    <img src="solana_qr.png" alt="Solana QR" width="200" />
+    <p><a href="https://phantom.app/">افتح محفظة Phantom</a></p>
+    <p>أو انسخ العنوان: <code>Bo6u7ecEfd7KbqqpBcr3iGmM4EYsQGLN9UPsZJBkZ2UZ</code></p>
+  </div>
+
+  <div class="ai-box">
+    <h3>جرّب الذكاء الاصطناعي:</h3>
+    <input type="text" id="userInput" placeholder="اكتب سؤالك هنا..." />
+    <br/>
+    <button onclick="respondAI()">أرسل</button>
+    <p id="responseBox"></p>
+  </div>
+
+  <script>
+    function respondAI() {
+      const input = document.getElementById('userInput').value;
+      const response = "هذه إجابة تجريبية على: " + input;
+      document.getElementById('responseBox').textContent = response;
+    }
+  </script>
+</body>
+</html>
